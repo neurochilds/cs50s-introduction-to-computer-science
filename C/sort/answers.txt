@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort.
+
+How do you know?: Bubble sort has O(n^2), Ω(n) and selection sort has O(n^2),  Ω(n^2). When sorting the worst case scenario (reversed50000.txt), both sort1 and sort3 performed within the same order of magnitude. However, when sorting the best case scenario (sorted50000.txt), sort1 was an order of magnitude faster than when sorting its worse case scenario. This is consisten with bubble sort having O(n^2), Ω(n). In contrast, sort3 showed neglibile difference, hence must be selection sort, as O = Ω for this algo.
+
+sort2 uses: Merge sort.
+
+How do you know?: Merge sort has O(n log n), Ω(n log n). Therefore, when sorting the worst case scenario (reversed50000.text), merge sort should perform faster than sort1 and sort3. Indeed, sort2 was an order of magnitude faster. Additionally, there was negligible difference in speed when sort2 sorted the best case scenario (sorted50000.txt), as would be expected as O = Ω for merge sort.
+
+sort3 uses: Selection sort.
+
+How do you know?: Bubble sort has O(n^2), Ω(n) and Selection sort has O(n^2),  Ω(n^2). When sorting the worst case scenario (reversed50000.txt), both sort1 and sort3 performed within the same order of magnitude. However, when sorting the best case scenario (sorted50000.txt), sort1 was an order of magnitude faster than when sorting its worse case scenario. This is consisten with bubble sort having O(n^2), Ω(n). In contrast, sort3 showed neglibile difference, hence must be selection sort, as O = Ω for this algo.
