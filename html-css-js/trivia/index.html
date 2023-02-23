@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header image">
+            <h1>Divine Trivia</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <div data-question="god-of-thunder">
+                    <h3>What is the Roman name for the god of thunder?</h3>
+                    <button class="mcq" value="zeus">Zeus</button>
+                    <button class="mcq" value="apollo">Apollo</button>
+                    <button class="mcq" value="jupiter">Jupiter</button>
+                    <p class="result"><br></p>
+                </div>
+
+                <div data-question="god-of-dead">
+                    <h3>What is the Greek name for the god of the dead?</h3>
+                    <button class="mcq" value="deadeus">Deadeus</button>
+                    <button class="mcq" value="hades">Hades</button>
+                    <button class="mcq" value="satan">Satan</button>
+                    <p class="result"><br></p>
+                </div>
+
+                <div data-question="god-of-messages">
+                    <h3>What is the Greek name for the messenger god?</h3>
+                    <button class="mcq" value="whispus">Whispus</button>
+                    <button class="mcq" value="hermes">Hermes</button>
+                    <button class="mcq" value="mercury">Mercury</button>
+                    <p class="result"><br></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <div data-question="god-of-love">
+                    <h3 id="q1">Who was the Greek goddess of love, beauty and sexuality?</h3>
+                    <input type="text"></input>
+                    <button onclick="submitAnswer(this)">Submit</button>
+                    <p class="result"><br></p>
+                </div>
+
+                <div data-question="god-of-sea">
+                    <h3 id="q2">Who was the Greek god of the sea?</h3>
+                    <input type="text"></input>
+                    <button onclick="submitAnswer(this)">Submit</button>
+                    <p class="result"><br></p>
+                </div>
+
+                <div data-question="hero-twelve-labours">
+                    <h3 id="q2">Who was the Greek hero known for his twelve labours?</h3>
+                    <input type="text"></input>
+                    <button onclick="submitAnswer(this)">Submit</button>
+                    <p class="result"><br></p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
