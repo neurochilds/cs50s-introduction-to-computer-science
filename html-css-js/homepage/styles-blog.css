@@ -1,0 +1,139 @@
+body, html {
+    background-color: #eafaf5;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+
+  .banner {
+    position:relative;
+    width: 100vw;
+    padding: 1.5em;
+    color: white;
+    background-color: #4acaa8;
+    text-align: center;
+  }
+
+  .wrapper {
+    margin: 4em;
+    padding-top: 5em;
+  }
+
+  section {
+    padding: 1em 9em 1em 0;
+    scroll-margin-top: 125px;
+  }
+
+  section a {
+    color: #74d8bd;
+    text-decoration: inherit;
+    transition: color 0.5s ease;
+  }
+
+  section.carousel {
+    margin-bottom: 5em;
+  }
+
+  section a:hover {
+    color: #4acaa8;
+  }
+
+  nav {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    text-align: center;
+    background-color: #74d8bd;
+    color: white;
+    font-size: 1.2em;
+    width: 9em;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav li {
+    color:white;
+    padding: 20px;
+    border-top: solid 1px rgba(255, 255, 255, 0.2);
+  }
+
+  nav li:first-child {
+    border-top: 0;
+  }
+
+  nav a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.5s ease;
+  }
+
+  nav a:hover {
+    color: #2d9f81;
+  }
+
+  #footer ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  #footer li {
+    color:#212529;
+    opacity: 0.5;
+  }
+
+  #footer li a {
+    color:inherit;
+    text-decoration: inherit;
+  }
+
+  #footer li a:hover {
+    color:#4acaa8;
+  }
+
+button.feedback {
+  background-color: #74d8bd;
+  border: 0.5px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  transition: background-color 0.35s ease-in-out;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+button.feedback:hover {
+    background-color: #34b290;
+}
+
+nav button {
+  background-color: #74d8bd;
+  border-radius: 0.25rem;
+  color: white;
+  border: transparent;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+  transition: background-color 0.35s ease-in-out;
+  vertical-align: middle;
+}
+
+nav button:hover{
+  color: #2d9f81;
+}
+
+#dislikeButton {
+  z-index:9999;
+}

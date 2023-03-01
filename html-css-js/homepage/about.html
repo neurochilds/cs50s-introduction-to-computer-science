@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles-blog.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <header>
+            <div class="banner">
+                <h1>About Me</h1>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li><button class="play" onclick=rainbow() value="rainbow">Rainbow</button></li>
+                    <li><button class="play" onclick=destroy() value="destroy">Destroy</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="wrapper">
+            <div id="main">
+
+                <section id="introduction">
+                    <div class="container">
+                        <h2>Hello, world.</h2>
+                        <p>I'm Tom, an aspiring cognitive neuroscientist. I have a bacherlor's degree in Medical Biochemistry and a master's degree in Neuroscience.
+                            I love learning about the brain and am fascinated to understand more about how the brain renders consciousness.
+                            I'm planning to do a PhD in cognitive neuroscience, but thought it would be beneficial to first learn some quantitative and automation skills.
+                            That's why I took CS50's Introduce to Computer Science.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="feedback">
+                    <div class="container">
+                        <h4>Feedback</h4>
+                        <p>Please leave let me know whether you liked or disliked the site.</p>
+                        <button class="feedback" id="likeButton">Like</button>
+                        <button class="feedback" id="dislikeButton">Dislike</button>
+                        <p class="message"><b>419</b> Likes <b>0</b> Dislikes<br><br></p>
+                    </div>
+                </section>
+            </div>
+
+            <section id="footer">
+                <div class="container">
+                    <ul>
+                        <li>© Tom Childs. All rights reserved. <a href="index.html">Return to landing Page.</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
