@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+{% if session["user_id"] %}
+    <h4 class="table-title">Stock Transactions</h4>
+    <table>
+        <tr>
+            <th>Transaction Type</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Value</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr class="{{transaction['transaction_type'] | lower}}">
+            <td>{{ transaction['transaction_type'] }}</td>
+            <td>{{ transaction['symbol'] }}</td>
+            <td>{{ transaction['shares'] }}</td>
+            <td>{{ transaction['price'] | usd}}</td>
+            <td>{{ transaction['total_value'] | usd}}</td>
+            <td>{{ transaction['timestamp'] }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    <h4 class="table-title">Cash Transactions</h4>
+    <table>
+        <tr>
+            <th>Transaction Type</th>
+            <th>Amount</th>
+            <th>Timestamp</th>
+        </tr>
+        <tr class="deposit">
+            <td>INITIAL BALANCE</td>
+            <td>{{ 10000 | usd}}</td>
+            <td>Account Creation</td>
+        </tr>
+        {% for transaction in deposits_withdrawals %}
+        <tr class="{{transaction['transaction_type'] | lower}}">
+            <td>{{ transaction['transaction_type'] }}</td>
+            <td>{{ transaction['transaction_amount'] | usd}}</td>
+            <td>{{ transaction['timestamp'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+{% endblock %}

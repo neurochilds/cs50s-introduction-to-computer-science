@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+{% if session["user_id"] %}
+    {% if balances[0] %}
+    <h4 class="table-title">Stocks Owned</h4>
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Shares Owned</th>
+            <th>Value</th>
+        </tr>
+        {% for balance in balances %}
+        <tr>
+            <td>{{ balance['symbol'] }}</td>
+            <td>{{ balance['name'] }}</td>
+            <td>{{ balance['price'] | usd }}</td>
+            <td>{{ balance['shares'] }}</td>
+            <td>{{ (balance['shares'] * balance['price']) | usd}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <h4 class="table-title">Balances</h4>
+    <table>
+        <tr>
+            <th>Invested Balance</th>
+            <th>Cash Balance</th>
+            <th>Total Balance</th>
+        </tr>
+        <tr>
+            <td>{{ invested_balance | usd }}</td>
+            <td>{{ cash_balance | usd}}</td>
+            <td>{{ (invested_balance + cash_balance) | usd}}</td>
+        </tr>
+    </table>
+{% endif %}
+{% endblock %}
